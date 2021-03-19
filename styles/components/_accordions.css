@@ -1,0 +1,25 @@
+.accordion {
+  &:last-child {
+    @apply pb-0;
+  }
+  
+  &--toggle {
+    @apply text-left;
+  }
+
+  &--icon {
+    /* style an icon */
+
+    .is-open & {
+      /* change style for open accordion */
+    }
+  }
+
+  &--content {
+    @apply overflow-hidden;
+  }
+
+  &--inner {
+    @apply m-0 mx-auto p-0 pt-4 max-w-2xl;
+  }
+}

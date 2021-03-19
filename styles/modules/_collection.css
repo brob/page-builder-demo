@@ -1,0 +1,88 @@
+.collection {
+  @apply overflow-hidden border-b;
+  
+  &--grid {
+    @apply grid grid-cols-1 md:grid-cols-3 -m-px;
+  }
+
+  &--pagination {
+    @apply relative p-4 sm:py-8 is-textured bg-pageBG border-t text-center;
+  }
+}
+
+.collection-count {
+  @apply hidden relative ml-2 leading-none;
+  vertical-align: super;
+  font-size: .5em;
+
+  /* Only show product counts for the mega-nav */
+  .mega-nav & {
+    @apply inline-block;
+  }
+}
+
+.product-card {
+  @apply flex flex-col relative p-8 border;
+  margin: -.5px;
+  
+  &--photo {
+    @apply relative overflow-hidden;
+
+    .is-hover {
+      @apply absolute inset-0 z-10 opacity-0 invisible transition-all;
+
+      .product-card:hover & {
+        @apply opacity-100 visible;
+      }
+    }
+  }
+
+  &--gallery {
+    @apply relative;
+
+    .carousel {
+      &--hud {
+        @apply z-30;
+      }
+    }
+  }
+
+  &--details {
+    @apply mt-8 text-center;
+  }
+
+  &--link {
+    @apply block no-underline text-current;
+
+    &::after {
+      @apply block absolute inset-0 z-20;
+      content: "";
+    }
+  }
+
+  .price {
+    &--current {
+      @apply sm:text-base sm:leading-normal font-semibold;
+    }
+  }
+
+  &--option {
+    @apply relative z-30 mt-4;
+
+    .option {
+      @apply m-0 p-0 border-0;
+
+      &--values {
+        @apply mx-auto;
+      }
+    }
+  }
+}
+
+.product-featured {
+  @apply relative;
+
+  h2 {
+    @apply mt-4 text-base font-semibold text-center;
+  }
+}
