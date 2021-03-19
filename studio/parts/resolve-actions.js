@@ -6,7 +6,7 @@ import defaultResolve, {
 
 import { FiEye } from 'react-icons/fi'
 
-const remoteURL = 'https://insane.codes'
+const remoteURL = 'https://page-builder-demo-six.vercel.app'
 const localURL = 'http://localhost:3000'
 const previewURL =
   window.location.hostname === 'localhost' ? localURL : remoteURL
